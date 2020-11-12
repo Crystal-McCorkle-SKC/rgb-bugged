@@ -69,7 +69,7 @@ function setupSquares(){
 					resetPressed = false;
 				}
 				scoreDisplay.textContent = score;
-				sessionStorage.setItem('score', score);
+				sessionStorage.setItem ('score', score);
 			} else {
 				this.style.background = "#232323";
 				messageDisplay.textContent = "Try Again"
@@ -132,7 +132,7 @@ resetButton.addEventListener("click", function(){
 /* change the colors of all the squares */ 
 function changeColors(color){
 	//loop through all squares
-	for(var i = 1; i < squares.length; i++){
+	for(var i = 0; i < squares.length; i++){
 		//change each color to match given color
 		squares[i].style.background = color;
 	}
