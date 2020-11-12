@@ -69,13 +69,13 @@ function setupSquares(){
 					resetPressed = false;
 				}
 				scoreDisplay.textContent = score;
-				localStorage.setItem('score', score);
+				sessionStorage.setItem('score', score);
 			} else {
 				this.style.background = "#232323";
 				messageDisplay.textContent = "Try Again"
 				score--;
 				scoreDisplay.textContent = score; 
-				localStorage.setItem('score', score);
+				sessionStorage.setItem('score', score);
 			}
 		} ); 
 	}
