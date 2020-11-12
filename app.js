@@ -25,13 +25,13 @@ Initialize the beginning setup of the game
 function init(){
 	setupModeButtons();
 	setupSquares();
-	var lsScore = localStorage.getItem('score');
+	var lsScore = sessionStorage.getItem('score');
 	if( lsScore !== null ){
 		score = lsScore; 
 		scoreDisplay.textContent = score;
 	}
 	else {
-		localStorage.setItem('score', score); 
+		sessionStorage.setItem('score', score); 
 	}
 	reset();
 }
@@ -147,7 +147,7 @@ function pickColor(){
 /* generate random colors in an array */ 
 function generateRandomColors(num){
 	//make an array
-	var arr = []  
+	var arr = [];  
 	//repeat num times
 	for(var i = 0; i < num; i++){
 		//get random color and push into arr
