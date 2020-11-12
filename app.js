@@ -58,7 +58,7 @@ function setupSquares(){
 			//grab color of clicked square
 			var clickedColor = this.style.background;
 			//compare color to pickedColor
-			if(clickedColor = pickedColor){ 
+			if(clickedColor === pickedColor){ 
 				updateColorName();
 				messageDisplay.textContent = "Correct!";
 				resetButton.textContent = "Play Again?"
@@ -77,7 +77,7 @@ function setupSquares(){
 				scoreDisplay.textContent = score; 
 				localStorage.setItem('score', score);
 			}
-		} );
+		} ); 
 	}
 }
 
@@ -147,7 +147,7 @@ function pickColor(){
 /* generate random colors in an array */ 
 function generateRandomColors(num){
 	//make an array
-	var arr = []
+	var arr = []  
 	//repeat num times
 	for(var i = 0; i < num; i++){
 		//get random color and push into arr
