@@ -65,7 +65,7 @@ function setupSquares(){
 				changeColors(clickedColor);
 				h1.style.background = clickedColor;
 				if(resetPressed){
-					score+=5; 
+					parseInt(score+=5); 
 					resetPressed = false;
 				}
 				scoreDisplay.textContent = score;
